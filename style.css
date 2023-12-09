@@ -1,0 +1,403 @@
+@import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Anek+Odia:wght@500&family=Lilita+One&family=Nova+Square&family=Preahvihear&family=Sarpanch:wght@500&family=Tourney:ital,wght@0,100;0,200;0,300;1,100;1,400&display=swap");
+
+body {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: rgb(203, 224, 245);
+    margin: 0;
+    background-color: #F9E79F;
+    font-family: 'Nova Square', sans-serif;
+}
+
+header {
+    background-color: #3B3546;
+    color: white;
+    width: 100%;
+    min-height: 75px;
+    text-align: center;
+    font-family: 'Tourney', sans-serif;  
+    font-size: 40px;  
+}
+
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0px;
+}
+
+ 
+/*-------------MENU-----------*/
+ .navigation {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background: #922B21; /* Flat blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lilita One', sans-serif;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Light shadow */
+}
+
+ul {
+    display: flex;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    margin: 0 15px; /* Add some spacing between items */
+}
+
+li a {
+    display: flex;
+    flex-direction: column; /* Set flex-direction to column */
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Add styling for the icon */
+li a .icon {
+    font-size: 2em;
+    background-color: #F1C40F;
+    border-radius: 50%; /* Make the background a circle */
+    padding: 22px; /* Optional: Add padding to give some space around the icon */
+    margin-bottom: 5px; /* Add spacing between icon and text */
+    color: #fff; /* Ensure the icon color is set */
+}
+
+li a:hover .icon {
+    color:#F1C40F ;
+    background-color: #F9E79F; /* Change the background color on hover */
+}
+
+li a span {
+    transition: transform 0.3s;
+    transform: translateY(20px); /* Move the text down by default */
+    display: inline-block;
+}
+
+li a:hover span {
+    transform: translateY(0); /* Move the text back up on hover */
+}
+
+
+li.active~.indicator {
+    --x: 0;
+    transform: translateX(var(--x));
+}
+
+li:nth-child(1).active~.indicator{ --x: 22px; }
+li:nth-child(2).active~.indicator{ --x: 140px; }
+li:nth-child(3).active~.indicator{ --x: 255px; }
+/*-----------END MENU----------*/
+
+/*-----------CONTENT-----------*/
+.content {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.0s ease-out;
+    background-color: white;  
+  }
+
+  .content2 {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #F5B7B1;
+  }
+
+main {
+    min-height: 850px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 10rem;
+}
+
+table {
+    border-collapse: collapse;
+    width: 450px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+th{
+    text-align: left;
+    padding: 8px;
+    background-color: #B03A2E;
+    color: black;
+    border: 3px solid black;
+    font-family: 'Sarpanch', sans-serif;
+}
+
+td{
+    padding: 5px;
+    text-align: left;
+    border: 3px solid black;
+    font-family: 'Sarpanch', sans-serif;
+
+}
+
+tr:nth-child(even) {
+    background-color: #F1C40F;
+    font-family: 'Sarpanch', sans-serif;
+  }
+
+
+
+.collapsible {
+    background: linear-gradient(to bottom, #922B21  0%, #E74C3C 100%);
+    color: black;
+    cursor: pointer;
+    padding: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+    border: 5px solid #7B241C;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border-radius: 2rem;
+    font-family: 'Preahvihear', sans-serif;
+  }
+  
+  .collapsible:hover {
+    background: linear-gradient(to bottom, #F1C40F 0%, #F9E79F 100%);
+    border:7px solid #D68910;
+    /* Adjust the color values for the hover effect */
+}
+  
+  .collapsible:after {
+    content: '\25b2'; /* Unicode arrow character pointing down */
+    color: #922B21;
+    background-color: #F9E79F;
+    border-radius: 80%;
+    padding: 8px;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    transition: transform 0.3s ease; /* Adding transition for a smooth effect */
+}
+
+.collapsible:hover:after {
+    background-color: #922B21 ;
+    color: #F9E79F;
+    transform: rotate(180deg); /* Rotate the arrow 180 degrees on hover */
+}
+
+  
+  .activate:after {
+    content: "\2212";
+  }
+
+  .career {
+    height: auto;
+    width: auto;
+    background-color: #E74C3C;
+    border: 2px solid #7B241C;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 1rem;
+  }
+  
+  .honor {
+    height: auto;
+    width: auto;
+    background-color: #F5B7B1;
+    border: 6px solid #CB4335;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 0.5rem;
+  }
+
+  .certificate-image {
+    width: 50px; /* Adjust the width as needed */
+    vertical-align: right; /* Aligns image vertically with text */
+    
+}
+
+.certificate-image2 {
+    width: 50px; /* Adjust the width as needed */
+    vertical-align: right; /* Aligns image vertically with text */
+    
+}
+
+.certificate-image3 {
+    width: 50px; /* Adjust the width as needed */
+    vertical-align: right; /* Aligns image vertically with text */
+   
+}
+.certificate-title {
+    font-size: 18px; /* Adjust the font size as needed */
+}
+
+.call {
+    background: linear-gradient(to bottom, #922B21 0%, #E74C3C 100%);
+    color: black;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    border: 5px solid #7B241C;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border-radius: 2rem;
+    font-family: 'Preahvihear', sans-serif;
+    position: relative; /* Add position relative for positioning pseudo-element */
+}
+
+.call::after {
+    content: '\25b2'; /* Unicode arrow character pointing down */
+    color: #922B21;
+    background-color: #F9E79F;
+    border-radius: 80%;
+    padding: 8px;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    transition: transform 0.3s ease; /* Adding transition for a smooth effect */
+}
+
+.call:hover {
+    background: linear-gradient(to bottom, #F1C40F 0%, #F9E79F 100%);
+    border: 7px solid #D68910;
+    /* Adjust the color values for the hover effect */
+}
+
+.call:hover::after {
+    background-color: #922B21;
+    color: #F9E79F;
+    transform: rotate(180deg); /* Rotate the arrow 180 degrees on hover */
+}
+
+
+
+.mail {
+    background: linear-gradient(to bottom, #922B21 0%, #E74C3C 100%);
+    color: black;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    border: 5px solid #7B241C;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border-radius: 2rem;
+    font-family: 'Preahvihear', sans-serif;
+    position: relative; /* Add position relative for positioning pseudo-element */
+}
+
+.mail::after {
+    content: '\25b2'; /* Unicode arrow character pointing down */
+    color: #922B21;
+    background-color: #F9E79F;
+    border-radius: 80%;
+    padding: 8px;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    transition: transform 0.3s ease; /* Adding transition for a smooth effect */
+}
+
+.mail:hover {
+    background: linear-gradient(to bottom, #F1C40F 0%, #F9E79F 100%);
+    border: 7px solid #D68910;
+    /* Adjust the color values for the hover effect */
+}
+
+.mail:hover::after {
+    background-color: #922B21;
+    color: #F9E79F;
+    transform: rotate(180deg); /* Rotate the arrow 180 degrees on hover */
+}
+
+.whatsapp {
+    background: linear-gradient(to bottom, #922B21 0%, #E74C3C 100%);
+    color: black;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    border: 5px solid #7B241C;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border-radius: 2rem;
+    font-family: 'Preahvihear', sans-serif;
+    position: relative; /* Add position relative for positioning pseudo-element */
+}
+
+.whatsapp::after {
+    content: '\25b2'; /* Unicode arrow character pointing down */
+    color: #922B21;
+    background-color: #F9E79F;
+    border-radius: 80%;
+    padding: 8px;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    transition: transform 0.3s ease; /* Adding transition for a smooth effect */
+}
+
+.whatsapp:hover {
+    background: linear-gradient(to bottom, #F1C40F 0%, #F9E79F 100%);
+    border: 7px solid #D68910;
+    /* Adjust the color values for the hover effect */
+}
+
+.whatsapp:hover::after {
+    background-color: #922B21;
+    color: #F9E79F;
+    transform: rotate(180deg); /* Rotate the arrow 180 degrees on hover */
+}
+
+
+
+.individual{
+    text-align: center;
+    background-color: #f1f1f1;
+    border: 4px solid black;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 0.5rem; 
+}
+  
+  /*------------END CONTENT-----------*/
+
+/*-------------FOOTER------------*/
+footer {
+    width: 100%;
+    position:relative;
+    background-color: #3B3546;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-family: Arial;
+    padding: 30px; 
+}
+
+@media only screen and (max-width: 500px) {
+}
